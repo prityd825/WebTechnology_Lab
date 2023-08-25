@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Example</title>
+    <script>
+        function addNumbers() {
+            // Retrieve the values of the input fields
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+
+            // Perform the addition
+            var sum = num1 + num2;
+
+            // Display the result
+            document.getElementById('result').innerHTML = 'Result: ' + sum;
+        }
+    </script>
+</head>
+<body>
+    <h2>Addition Example</h2>
+    <input type="number" id="num1" placeholder="Enter the first number">
+    <input type="number" id="num2" placeholder="Enter the second number">
+    <button onclick="addNumbers()">Add</button>
+    <div id="result"></div>
+</body>
+</html>
