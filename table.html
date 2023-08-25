@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table with colspan and rowspan</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Table with colspan and rowspan</h1>
+
+  <table>
+    <tr>
+      <th colspan="2">Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Cell 1</td>
+      <td>Cell 2</td>
+      <td rowspan="2">Cell 3</td>
+    </tr>
+    <tr>
+      <td>Cell 4</td>
+    </tr>
+    <tr>
+      <td colspan="3">Footer</td>
+    </tr>
+  </table>
+
+</body>
+</html>

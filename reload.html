@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Change Page</title>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
+</head>
+<body>
+  <h1>Color Change Page</h1>
+
+  <button onclick="changeColor('green')">Green</button>
+  <button onclick="changeColor('yellow')">Yellow</button>
+  <button onclick="reloadPage()">Reload</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="submit.php" method="post">
+           <label for="name" >Name: </label>
+           <input type="text" id="name" name="name" required><br>
+           
+           <label for="email">Email: </label>
+           <input type="text" id="email" name="email" required><br>
+
+           <label>Gender: </label>
+           <input type="radio" id="male" name="gender" value="male">
+           <label for="male">Male</label>
+           <input type="radio" id="female" name="gender" value="female">
+           <label for="female">Female</label><br>
+
+           <label>Language: </label>
+           <input type="checkbox" id="english" name="language" value="english">
+           <label for="english">English</label>
+           <input type="checkbox" id="bangla" name="language" value="bangla">
+           <label for="bangla">Bangla</label><br>
+
+           <label for="country">Country: </label>
+           <select name="country" id="country">
+            <option value="usa">USA</option>
+            <option value="bangladesh">Bangladesh</option>
+            <option value="india">India</option>
+            <option value="canada">Canada</option>
+           </select><br>
+
+           <input type="submit" value="SUbmit">
+        </form>
+    </div>
+</body>
+</html>

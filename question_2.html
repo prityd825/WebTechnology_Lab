@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question_2</title>
+  <script>
+    function calculateArea() {
+      var shape = document.getElementById("shape").value;
+
+      if (shape === "circle")
+       {
+        var radius = parseFloat(document.getElementById("radius").value);
+        var area = Math.PI * radius * radius;
+        alert("The area of the circle is: " + area.toFixed(2));
+      } 
+      else if (shape === "rectangle")
+       {
+        var length = parseFloat(document.getElementById("length").value);
+        var width = parseFloat(document.getElementById("width").value);
+        var area = length * width;
+        alert("The area of the rectangle is: " + area.toFixed(2));
+      }
+       else if (shape === "triangle")
+        {
+        var base = parseFloat(document.getElementById("base").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var area = 0.5 * base * height;
+        alert("The area of the triangle is: " + area.toFixed(2));
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>Geometric Shape</h3>
+
+  <form>
+    <label>Select a shape:</label>
+    <select id="shape">
+      <option value="circle">Circle</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="triangle">Triangle</option>
+    </select>
+    <br /><br />
+
+    <div id="circle" style="display: none;">
+      <label>Radius:</label>
+      <input type="number" id="radius" min="0" step="any" /><br /><br />
+    </div>
+
+    <div id="rectangle" style="display: none;">
+      <label>Length:</label>
+      <input type="number" id="length" min="0" step="any" /><br /><br />
+
+      <label>Width:</label>
+      <input type="number" id="width" min="0" step="any" /><br /><br />
+    </div>
+
+    <div id="triangle" style="display: none;">
+      <label>Base:</label>
+      <input type="number" id="base" step="any" /><br /><br />
+
+      <label>Height:</label>
+      <input type="number" id="height" step="any" /><br /><br />
+    </div>
+
+    <input type="submit" value="Calculate" onclick="calculateArea()" />
+  </form>
+
+  <script>
+    var shapeSelect = document.getElementById("shape");
+    var circle = document.getElementById("circle");
+    var rectangle = document.getElementById("rectangle");
+    var triangle = document.getElementById("triangle");
+
+    shapeSelect.addEventListener("change", function() {
+      if (shapeSelect.value === "circle") {
+        circle.style.display = "block";
+        rectangle.style.display = "none";
+        triangle.style.display = "none";
+      } else if (shapeSelect.value === "rectangle") {
+        circle.style.display = "none";
+        rectangle.style.display = "block";
+        triangle.style.display = "none";
+      } else if (shapeSelect.value === "triangle") {
+        circle.style.display = "none";
+        rectangle.style.display = "none";
+        triangle.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guessing Game</title>
+  <script>
+    function generateRandomNumber() {
+      return Math.floor(Math.random() * 100) + 1; // Generates a random number between 1 and 100
+    }
+
+    function checkGuess() {
+      var guess = parseInt(document.getElementById("guess").value);
+      var randomNumber = parseInt(document.getElementById("randomNumber").value);
+      var result = document.getElementById("result");
+
+      if (isNaN(guess)) {
+        result.innerHTML = "Please enter a valid number.";
+      } else {
+        if (guess === randomNumber) {
+          result.innerHTML = "Congratulations! You guessed it right!";
+        } else if (guess < randomNumber) {
+          result.innerHTML = "Too low. Try again!";
+        } else {
+          result.innerHTML = "Too high. Try again!";
+        }
+      }
+    }
+
+    function playAgain() {
+      var randomNumber = generateRandomNumber();
+      document.getElementById("randomNumber").value = randomNumber;
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+  <h1>Guessing Game</h1>
+
+  <p>Guess a number between 1 and 100:</p>
+  <input type="number" id="guess" placeholder="Enter your guess" /><br /><br />
+
+  <button onclick="checkGuess()">Check</button><br /><br />
+
+  <div id="result"></div><br /><br />
+
+  <input type="hidden" id="randomNumber" value="" />
+
+  <button onclick="playAgain()">Play Again</button>
+
+  <script>
+    var randomNumber = generateRandomNumber();
+    document.getElementById("randomNumber").value = randomNumber;
+  </script>
+</body>
+</html>
+ 

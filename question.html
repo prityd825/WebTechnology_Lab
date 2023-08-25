@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_1</title>
+</head>
+<body>
+  <h1>Table</h1>
+
+  <table id="table" border="1">
+    <tr>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>E</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>H</td>
+      <td>I</td>
+    </tr>
+  </table>
+  <br/>
+
+  <button onclick="updateCell(0, 2, 'update')">Update Cell</button>
+<script>
+    function updateCell(row, col, content) {
+  var table = document.getElementById("table");
+  var rows = table.getElementsByTagName("tr");
+  
+  if (row >= 0 && row < rows.length) {
+    var cells = rows[row].getElementsByTagName("td");
+    
+    if (col >= 0 && col < cells.length) {
+      cells[col].innerHTML = content;
+    }
+  }
+}
+
+</script>
+  
+  
+</body>
+</html>

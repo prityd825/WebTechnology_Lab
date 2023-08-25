@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <script>
+        function convertCurrency() {
+            var amount = parseFloat(document.getElementById("amount").value);
+            var fromCurrency = document.getElementById("fromCurrency").value;
+            var toCurrency = document.getElementById("toCurrency").value;
+
+            // Define your conversion rates here
+            var conversionRates = {
+                "USD": 1.0,
+                "EUR": 0.85,
+                "GBP": 0.72,
+                "JPY": 110.23
+                // Add more currencies and their rates as needed
+            }; 
+
+            
+            var result = amount * conversionRates[fromCurrency] / conversionRates[toCurrency];
+
+            document.getElementById("result").innerHTML = result.toFixed(2) + " " + toCurrency;
+        }
+    </script>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" min="0" step="any">
+    <br/> <br/>
+
+    <label for="fromCurrency">From:</label>
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <!-- Add more currency options as needed -->
+    </select>
+    <br/> <br/>
+
+    <label for="toCurrency">To:</label>
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+        <!-- Add more currency options as needed -->
+    </select>
+    <br/> <br/>
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <p id="result"></p>
+</body>
+</html>
+   

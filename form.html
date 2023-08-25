@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Advanced Form</h1>
+    <form>
+        <label for="fname">First name: </label>
+        <input type="text" id="name" name="name" placeholder="Enter your first name" required/>
+        <br/> <br/>
+        <label for="lname">Last name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your last name" required/>
+        <br/> <br/>
+
+        <label for="gender">Gender: </label>
+        <input type="radio" id="male" name ="gender" value="male" required/>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name ="gender" value="female" required  />
+        <label for="female">Female</label>
+        <br/> <br/>
+        
+        <label for="country">Country</label>
+        <select id="country"> 
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Nepal">Nepal</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Japan">Japan</option>
+        </select>
+        <br/> <br/>
+
+        <label for="massage">Massage: </label>
+        <textarea id="massage" name="massage" placeholder="Enter the massage"></textarea>
+        <br/><br/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
